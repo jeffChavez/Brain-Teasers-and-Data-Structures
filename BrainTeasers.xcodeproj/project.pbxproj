@@ -26,6 +26,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B8EF90E1A23E67E009E46AC /* ArraySort.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ArraySort.playground; sourceTree = "<group>"; };
+		6BA0C5821A259D6D0022D910 /* LinkedList.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LinkedList.playground; sourceTree = "<group>"; };
+		6BA0C5831A259D7D0022D910 /* HashTables.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HashTables.playground; sourceTree = "<group>"; };
+		6BA0C5841A259E080022D910 /* Stack.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Stack.playground; sourceTree = "<group>"; };
+		6BA0C5851A25A0030022D910 /* Queue.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Queue.playground; sourceTree = "<group>"; };
 		6BB110F91A19A5D800807B10 /* BrainTeasers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainTeasers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB110FD1A19A5D800807B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BB110FE1A19A5D800807B10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +41,12 @@
 		6BB1110E1A19A5D800807B10 /* BrainTeasersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrainTeasersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB111131A19A5D800807B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BB111141A19A5D800807B10 /* BrainTeasersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainTeasersTests.swift; sourceTree = "<group>"; };
+		6BB1111E1A19A5F500807B10 /* GetProductsExceptAtIndex.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GetProductsExceptAtIndex.playground; sourceTree = "<group>"; };
+		6BE6F87A1A19B040000DA611 /* FizzBuzz.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FizzBuzz.playground; sourceTree = "<group>"; };
+		6BE6F87B1A19B04D000DA611 /* ReverseAString.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ReverseAString.playground; sourceTree = "<group>"; };
+		6BE6F87C1A19B05A000DA611 /* SumOfMultiples.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SumOfMultiples.playground; sourceTree = "<group>"; };
+		6BE6F87D1A19B066000DA611 /* Factorials.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Factorials.playground; sourceTree = "<group>"; };
+		6BE6F87E1A19B53C000DA611 /* SumNoArithmetic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SumNoArithmetic.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +67,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BA0C5801A259D4B0022D910 /* Brain Teasers */ = {
+			isa = PBXGroup;
+			children = (
+				6BE6F87B1A19B04D000DA611 /* ReverseAString.playground */,
+				6BE6F87D1A19B066000DA611 /* Factorials.playground */,
+				6BE6F87A1A19B040000DA611 /* FizzBuzz.playground */,
+				6BE6F87C1A19B05A000DA611 /* SumOfMultiples.playground */,
+				6BE6F87E1A19B53C000DA611 /* SumNoArithmetic.playground */,
+				6BB1111E1A19A5F500807B10 /* GetProductsExceptAtIndex.playground */,
+				6B8EF90E1A23E67E009E46AC /* ArraySort.playground */,
+			);
+			name = "Brain Teasers";
+			sourceTree = "<group>";
+		};
+		6BA0C5811A259D540022D910 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				6BA0C5821A259D6D0022D910 /* LinkedList.playground */,
+				6BA0C5831A259D7D0022D910 /* HashTables.playground */,
+				6BA0C5841A259E080022D910 /* Stack.playground */,
+				6BA0C5851A25A0030022D910 /* Queue.playground */,
+			);
+			name = "Data Structures";
+			sourceTree = "<group>";
+		};
 		6BB110F01A19A5D800807B10 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +115,8 @@
 			children = (
 				6BB110FE1A19A5D800807B10 /* AppDelegate.swift */,
 				6BB111001A19A5D800807B10 /* ViewController.swift */,
+				6BA0C5801A259D4B0022D910 /* Brain Teasers */,
+				6BA0C5811A259D540022D910 /* Data Structures */,
 				6BB111021A19A5D800807B10 /* Main.storyboard */,
 				6BB111051A19A5D800807B10 /* Images.xcassets */,
 				6BB111071A19A5D800807B10 /* LaunchScreen.xib */,
@@ -407,6 +445,7 @@
 				6BB1111A1A19A5D800807B10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6BB1111B1A19A5D800807B10 /* Build configuration list for PBXNativeTarget "BrainTeasersTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +454,7 @@
 				6BB1111D1A19A5D800807B10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
