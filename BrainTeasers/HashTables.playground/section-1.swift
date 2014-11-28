@@ -55,7 +55,7 @@ class HashTable {
                 newHashArray.append(bucket)
             }
             //update size property
-            hashTable.size = newHashArray.count
+            self.size = newHashArray.count
             
             //for each bucket in the smaller array
             for bucket in self.hashArray {
