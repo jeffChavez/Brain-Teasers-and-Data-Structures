@@ -140,7 +140,10 @@ class HashTable {
     }
 }
 
+//make a new table
 var hashTable = HashTable(size: 10)
+
+//set some values
 hashTable.setValue("John 689-5950", key: "John")
 hashTable.setValue("Brad 423-4323", key: "Brad")
 hashTable.setValue("Stacy 432-4566", key: "Stacy")
@@ -148,6 +151,9 @@ hashTable.setValue("Bob 123-4325", key: "Bob")
 hashTable.setValue("Tuker 562-3241", key: "Tuker")
 hashTable.setValue("Joe 432-3154", key: "Joe")
 
+//check the hash for these keys, uh oh, collision ahead
+//we will need to resolve the collisions by pulling out each .next for each bucket
+//and reassigning them a new location in the larger newHashArray
 hashTable.hash("John")
 hashTable.hash("Brad")
 hashTable.hash("Stacy")
@@ -161,6 +167,7 @@ println("The size of the table is \(hashTable.size!)")
 hashTable.setValue("Sam 434-5955", key: "Sam")
 println("The size of the table is \(hashTable.size!)")
 
+//check the hashes again, no more collisions!
 hashTable.hash("John")
 hashTable.hash("Brad")
 hashTable.hash("Stacy")
@@ -169,7 +176,7 @@ hashTable.hash("Tuker")
 hashTable.hash("Joe")
 hashTable.hash("Sam")
 
-//make sure the values carried over to thte new array, we are missing some because of collisions though
+//make sure all 7 values carried over to the new array
 hashTable.hashArray
 hashTable.hashArray[0].value
 hashTable.hashArray[1].value
