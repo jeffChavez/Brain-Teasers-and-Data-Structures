@@ -71,11 +71,11 @@ class HashTable {
             //check each bucket in hashArray
             for bucket in self.hashArray {
                 var currentBucket = bucket
-                //if the bucket has something in it
+                //if the bucket has a key
                 if currentBucket.key != nil {
-                    //create a new index from that bucket's key
+                    //it does, create a new index from that bucket's key
                     var newIndex = self.hash(currentBucket.key!)
-                    //it does, check if it's new location in newHashArray is empty
+                    //using newIndex, go to that bucket in newHashArray, check if it's empty
                     if newHashArray[newIndex].key == nil {
                         //it is empty, assign
                         newHashArray[newIndex].key = currentBucket.key
@@ -97,7 +97,7 @@ class HashTable {
                         currentBucket = currentBucket.next!
                         //create a new index from that bucket's key
                         var newIndex = self.hash(currentBucket.key!)
-                        //check if it's new location in newHashArray is empty
+                        //using newIndex, go to that bucket in newHashArray, check if it's empty
                         if newHashArray[newIndex].key == nil {
                             //it is empty, assign
                             newHashArray[newIndex].key = currentBucket.key
