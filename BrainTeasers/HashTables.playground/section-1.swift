@@ -16,13 +16,13 @@ class HashBucket {
 
 class HashTable {
     
-    var size : Int?
+    var size : Int!
     var hashArray = [HashBucket]()
     var filledBuckets : Float = 0
     
     init (size: Int) {
         self.size = size
-        for i in 0..<size {
+        for i in 1...size {
             var bucket = HashBucket()
             self.hashArray.append(bucket)
         }
@@ -39,38 +39,84 @@ class HashTable {
     
     func setValue (value: String, key: String) {
         var index = self.hash(key)
-        var bucket = HashBucket()
-        bucket.key = key
-        bucket.value = value
-        self.hashArray[index] = bucket
+        var currentBucket: HashBucket? = self.hashArray[index]
+        if currentBucket?.key == nil {
+            currentBucket?.key = key
+            currentBucket?.value = value
+        } else {
+            while currentBucket?.next != nil {
+                currentBucket = currentBucket?.next
+            }
+            var bucket = HashBucket()
+            bucket.key = key
+            bucket.value = value
+            currentBucket?.next = bucket
+        }
         self.filledBuckets++
         
-        //dynamic resize
+        //dynamic resize, beware this is repetitive, I need to learn recursion...
+        
         //if the capacity has reached 70% full
         if Float(self.filledBuckets) >= Float(self.hashArray.count) * 0.7 {
             //create a new array of empty HashBuckets double the size of the hash table
             var newHashArray = [HashBucket]()
-            for i in 0..<self.size! * 2 {
+            println(self.size)
+            for i in 1...self.size * 2 {
                 var bucket = HashBucket()
                 newHashArray.append(bucket)
             }
             //update size property
             self.size = newHashArray.count
             
-            //for each bucket in the smaller array
+            //check each bucket in hashArray
             for bucket in self.hashArray {
-                //check if it has something in it
-                if bucket.value != nil {
-                    //if it does, take it out and put it inside the bucket in the larger array
-                    var newIndex = self.hash(bucket.key!)
-                    var newBucket = HashBucket()
-                    newBucket.value = bucket.value
-                    newBucket.key = bucket.key
-                    newBucket.next = bucket
-                    newHashArray[newIndex] = newBucket
+                var currentBucket = bucket
+                //if the bucket has something in it
+                if currentBucket.key != nil {
+                    //create a new index from that bucket's key
+                    var newIndex = self.hash(currentBucket.key!)
+                    //it does, check if it's new location in newHashArray is empty
+                    if newHashArray[newIndex].key == nil {
+                        //it is empty, assign
+                        newHashArray[newIndex].key = currentBucket.key
+                        newHashArray[newIndex].value = currentBucket.value
+                    } else {
+                        //it's not empty, find an empty .next
+                        while newHashArray[newIndex].next != nil {
+                            newHashArray[newIndex] = newHashArray[newIndex].next!
+                        }
+                        //found it, assign
+                        var newBucket = HashBucket()
+                        newBucket.key = currentBucket.key
+                        newBucket.value = currentBucket.value
+                        newHashArray[newIndex].next = newBucket
+                    }
+                    //still looking at the same bucket, check if it's .next has something in it
+                    while currentBucket.next != nil {
+                        //it does, go to that filled bucket
+                        currentBucket = currentBucket.next!
+                        //create a new index from that bucket's key
+                        var newIndex = self.hash(currentBucket.key!)
+                        //check if it's new location in newHashArray is empty
+                        if newHashArray[newIndex].key == nil {
+                            //it is empty, assign
+                            newHashArray[newIndex].key = currentBucket.key
+                            newHashArray[newIndex].value = currentBucket.value
+                        } else {
+                            //it's not empty, find an empty .next
+                            while newHashArray[newIndex].next != nil {
+                                newHashArray[newIndex] = newHashArray[newIndex].next!
+                            }
+                            //found it, assign
+                            var newBucket = HashBucket()
+                            newBucket.key = currentBucket.key
+                            newBucket.value = currentBucket.value
+                            newHashArray[newIndex].next = newBucket
+                        }
+                    }
                 }
             }
-            //replace the smaller array with the larger one
+            //success! now replace the smaller array with the larger one
             self.hashArray = newHashArray
         }
     }
@@ -114,6 +160,14 @@ hashTable.hash("Sam")
 println("The size of the table is \(hashTable.size!)")
 hashTable.setValue("Sam 434-5955", key: "Sam")
 println("The size of the table is \(hashTable.size!)")
+
+hashTable.hash("John")
+hashTable.hash("Brad")
+hashTable.hash("Stacy")
+hashTable.hash("Bob")
+hashTable.hash("Tuker")
+hashTable.hash("Joe")
+hashTable.hash("Sam")
 
 //make sure the values carried over to thte new array, we are missing some because of collisions though
 hashTable.hashArray
