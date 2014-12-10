@@ -79,12 +79,11 @@ class HashTable {
             for i in 1...self.size * 2 {
                 newHashArray.append(LinkedList())
             }
-            
             self.size = newHashArray.count
             for list in self.hashArray {
                 while list.head != nil {
                     var removedValue = list.removeValue(list.head!.value!)
-                    newHashArray[self.hash(value)].setValue(removedValue!)
+                    newHashArray[self.hash(removedValue!)].setValue(removedValue!)
                 }
             }
             self.hashArray = newHashArray
@@ -102,15 +101,32 @@ aHashTable.setValue("Brad")
 aHashTable.setValue("Brad")
 aHashTable.setValue("Bob")
 aHashTable.setValue("John")
-aHashTable.setValue("Jorb")
+aHashTable.setValue("Jorge")
 aHashTable.setValue("Stacy")
 aHashTable.size
 aHashTable.setValue("Stacy")
 aHashTable.size
 
-
-
-
+aHashTable.hashArray[0].head?.value
+aHashTable.hashArray[1].head?.value
+aHashTable.hashArray[2].head?.value
+aHashTable.hashArray[3].head?.value
+aHashTable.hashArray[4].head?.value
+aHashTable.hashArray[5].head?.value
+aHashTable.hashArray[6].head?.value
+aHashTable.hashArray[7].head?.value
+aHashTable.hashArray[8].head?.value
+aHashTable.hashArray[9].head?.value
+aHashTable.hashArray[10].head?.value
+aHashTable.hashArray[11].head?.value
+aHashTable.hashArray[12].head?.value
+aHashTable.hashArray[13].head?.value
+aHashTable.hashArray[14].head?.value
+aHashTable.hashArray[15].head?.value
+aHashTable.hashArray[16].head?.value
+aHashTable.hashArray[17].head?.value
+aHashTable.hashArray[18].head?.value
+aHashTable.hashArray[19].head?.value
 
 
 
