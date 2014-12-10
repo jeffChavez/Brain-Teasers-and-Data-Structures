@@ -50,7 +50,7 @@
 		6BE6F87C1A19B05A000DA611 /* SumOfMultiples.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SumOfMultiples.playground; sourceTree = "<group>"; };
 		6BE6F87D1A19B066000DA611 /* Factorials.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Factorials.playground; sourceTree = "<group>"; };
 		6BE6F87E1A19B53C000DA611 /* SumNoArithmetic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SumNoArithmetic.playground; sourceTree = "<group>"; };
-		6BEC770D1A2E296D00850621 /* HashTable (Recursion).playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "HashTable (Recursion).playground"; sourceTree = "<group>"; };
+		6BEC770D1A2E296D00850621 /* HashTable (with LinkedLists).playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "HashTable (with LinkedLists).playground"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 			children = (
 				6BA0C5821A259D6D0022D910 /* LinkedList.playground */,
 				6BA0C5831A259D7D0022D910 /* HashTables.playground */,
-				6BEC770D1A2E296D00850621 /* HashTable (Recursion).playground */,
+				6BEC770D1A2E296D00850621 /* HashTable (with LinkedLists).playground */,
 				6BA0C5841A259E080022D910 /* Stack.playground */,
 				6BA0C5851A25A0030022D910 /* Queue.playground */,
 				6BDD6D1B1A2CCDB5002A68F6 /* BinarySearchTree.playground */,

@@ -54,7 +54,7 @@ class HashTable {
         }
         self.filledBuckets++
         
-        //dynamic resize, beware this is repetitive, I need to learn recursion...
+        //dynamic resize, beware this is repetitive, I need to learn a better way...
         
         //if the capacity has reached 70% full
         if Float(self.filledBuckets) >= Float(self.hashArray.count) * 0.7 {

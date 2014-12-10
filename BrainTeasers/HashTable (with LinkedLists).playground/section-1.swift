@@ -1,6 +1,6 @@
 // Playground - noun: a place where people can play
 
-
+//a better way to do hashtables by using LinkedLists
 
 class LinkedList {
     
@@ -36,7 +36,7 @@ class LinkedList {
             return value
         }
         var currentNode = self.head
-        var previousNode = Node()
+        var previousNode : Node!
         while currentNode?.value != value && currentNode?.next != nil {
             previousNode = currentNode!
             currentNode = currentNode?.next
@@ -44,8 +44,9 @@ class LinkedList {
         var nodeToReturn = currentNode
         if currentNode?.value == value {
             previousNode.next = currentNode?.next
+            return nodeToReturn?.value
         }
-        return nodeToReturn?.value
+        return nil
     }
 }
 
