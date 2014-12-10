@@ -42,11 +42,15 @@
 		6BB111131A19A5D800807B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BB111141A19A5D800807B10 /* BrainTeasersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainTeasersTests.swift; sourceTree = "<group>"; };
 		6BB1111E1A19A5F500807B10 /* GetProductsExceptAtIndex.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GetProductsExceptAtIndex.playground; sourceTree = "<group>"; };
+		6BC209EF1A33B25A0047FA5F /* ManyStacks.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ManyStacks.playground; sourceTree = "<group>"; };
+		6BDD6D1B1A2CCDB5002A68F6 /* BinarySearchTree.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BinarySearchTree.playground; sourceTree = "<group>"; };
+		6BDD6D1C1A2E22A6002A68F6 /* Palindrome.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Palindrome.playground; sourceTree = "<group>"; };
 		6BE6F87A1A19B040000DA611 /* FizzBuzz.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FizzBuzz.playground; sourceTree = "<group>"; };
 		6BE6F87B1A19B04D000DA611 /* ReverseAString.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ReverseAString.playground; sourceTree = "<group>"; };
 		6BE6F87C1A19B05A000DA611 /* SumOfMultiples.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SumOfMultiples.playground; sourceTree = "<group>"; };
 		6BE6F87D1A19B066000DA611 /* Factorials.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Factorials.playground; sourceTree = "<group>"; };
 		6BE6F87E1A19B53C000DA611 /* SumNoArithmetic.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SumNoArithmetic.playground; sourceTree = "<group>"; };
+		6BEC770D1A2E296D00850621 /* HashTable (Recursion).playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "HashTable (Recursion).playground"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				6BE6F87E1A19B53C000DA611 /* SumNoArithmetic.playground */,
 				6BB1111E1A19A5F500807B10 /* GetProductsExceptAtIndex.playground */,
 				6B8EF90E1A23E67E009E46AC /* ArraySort.playground */,
+				6BDD6D1C1A2E22A6002A68F6 /* Palindrome.playground */,
+				6BC209EF1A33B25A0047FA5F /* ManyStacks.playground */,
 			);
 			name = "Brain Teasers";
 			sourceTree = "<group>";
@@ -86,8 +92,10 @@
 			children = (
 				6BA0C5821A259D6D0022D910 /* LinkedList.playground */,
 				6BA0C5831A259D7D0022D910 /* HashTables.playground */,
+				6BEC770D1A2E296D00850621 /* HashTable (Recursion).playground */,
 				6BA0C5841A259E080022D910 /* Stack.playground */,
 				6BA0C5851A25A0030022D910 /* Queue.playground */,
+				6BDD6D1B1A2CCDB5002A68F6 /* BinarySearchTree.playground */,
 			);
 			name = "Data Structures";
 			sourceTree = "<group>";

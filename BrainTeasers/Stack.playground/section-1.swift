@@ -12,16 +12,13 @@ class Stack {
     
     func pop () -> Int? {
         if !stackArray.isEmpty {
-            var objectToRemove = stackArray.last
-            stackArray.removeLast()
-            return objectToRemove!
-        } else {
-            return nil
+            return stackArray.removeLast()
         }
+        return nil
     }
     
     func observe () {
-        stackArray
+        stackArray.last
     }
 }
 
@@ -30,4 +27,12 @@ stack.push(1)
 stack.push(2)
 stack.push(3)
 stack.pop()
+stack.observe()
+
+var pop = stack.pop()
+
+stack.observe()
+
+pop
+
 stack.observe()

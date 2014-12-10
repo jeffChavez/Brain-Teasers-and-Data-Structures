@@ -36,6 +36,7 @@ class LinkedList {
             currentNode?.next = node
         }
     }
+    
     func remove (value: Int) {
         if self.head != nil {
             if self.head?.value == value {
@@ -52,6 +53,7 @@ class LinkedList {
             }
         }
     }
+    
     func displayAsArray () -> [Int] {
         var linkedListValues = [Int]()
         var currentNode = head
