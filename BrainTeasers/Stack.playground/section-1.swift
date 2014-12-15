@@ -17,8 +17,11 @@ class Stack {
         return nil
     }
     
-    func observe () {
-        stackArray.last
+    func peek () -> Int? {
+        if !stackArray.isEmpty {
+            return stackArray.last
+        }
+        return nil
     }
 }
 
@@ -27,12 +30,4 @@ stack.push(1)
 stack.push(2)
 stack.push(3)
 stack.pop()
-stack.observe()
-
-var pop = stack.pop()
-
-stack.observe()
-
-pop
-
-stack.observe()
+stack.peek()
