@@ -47,6 +47,7 @@
 		6BC209EF1A33B25A0047FA5F /* ManyStacks.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ManyStacks.playground; sourceTree = "<group>"; };
 		6BDD6D1B1A2CCDB5002A68F6 /* BinarySearchTree.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BinarySearchTree.playground; sourceTree = "<group>"; };
 		6BDD6D1C1A2E22A6002A68F6 /* Palindrome.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Palindrome.playground; sourceTree = "<group>"; };
+		6BE1A5E71A67100400C24256 /* IntandIntArrays.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = IntandIntArrays.playground; sourceTree = "<group>"; };
 		6BE6F87A1A19B040000DA611 /* FizzBuzz.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FizzBuzz.playground; sourceTree = "<group>"; };
 		6BE6F87B1A19B04D000DA611 /* ReverseAString.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ReverseAString.playground; sourceTree = "<group>"; };
 		6BE6F87C1A19B05A000DA611 /* SumOfMultiples.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SumOfMultiples.playground; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 				6BC209EF1A33B25A0047FA5F /* ManyStacks.playground */,
 				6B14E28F1A38188600B6019E /* StackSortAscending.playground */,
 				6B50FAF41A396F8100728FF1 /* RandomNote.playground */,
+				6BE1A5E71A67100400C24256 /* IntandIntArrays.playground */,
 			);
 			name = "Brain Teasers";
 			sourceTree = "<group>";

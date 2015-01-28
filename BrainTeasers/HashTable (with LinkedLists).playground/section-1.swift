@@ -129,7 +129,3 @@ aHashTable.hashArray[17].head?.value
 aHashTable.hashArray[18].head?.value
 aHashTable.hashArray[19].head?.value
 
-
-
-
-

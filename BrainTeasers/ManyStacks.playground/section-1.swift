@@ -24,7 +24,7 @@ class SetOfStacks {
         } else {
             var index = self.arrayOfStacks.count - 1
             var currentStack = self.arrayOfStacks[index]
-            while currentStack.stackArray.count < self.capacity {
+            if currentStack.stackArray.count < self.capacity {
                 currentStack.push(value)
                 return
             }

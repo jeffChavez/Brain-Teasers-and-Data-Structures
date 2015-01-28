@@ -5,6 +5,9 @@
 class HashTable {
     var array = [String]()
     
+    func setValue (value: String) {
+        
+    }
 }
 
 
